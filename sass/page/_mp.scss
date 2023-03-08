@@ -1,0 +1,338 @@
+//@mixin mainBannerSetting
+// 首頁區塊設定
+.mpSlider {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding-bottom: 50px;
+  background-image: url(../images/lower_left_corner.png), url(../images/lower_right_corner.png);
+  background-repeat: no-repeat;
+  background-position: left bottom, right bottom;
+  background-size: 100px 50px;
+  @include screen('mobile') {
+    background: none;
+    padding-bottom: 30px;
+  }
+  .container {
+    background: rgba(255, 255, 255, 0.7);
+    position: relative;
+    padding: 0 90px;
+    max-width: 100%;
+    @include screen('mobile') {
+      padding: 0;
+    }
+    &::after {
+      content: '';
+      display: block;
+      height: 48px;
+      width: calc(100% - 200px);
+      position: absolute;
+      top: 100%;
+      left: 100px;
+      background: rgba(255, 255, 255, 0.7);
+      @include screen('mobile') {
+        width: 100%;
+        height: 30px;
+        left: 0;
+      }
+    }
+  }
+}
+section {
+  .more {
+    margin: 2em 0 1em auto;
+    display: flex;
+    justify-content: flex-end;
+    a {
+      display: block;
+      width: 190px;
+      border-radius: 40px;
+      position: relative;
+      background: $colorPrimary;
+      text-align: center;
+      padding: 18px;
+      color: $colorWord;
+      font-size: rem(16);
+      transition: 0.3s;
+      &:hover {
+        color: #000;
+        background: mix($colorPrimary, #000, 95%);
+        box-shadow: 0 2px 7px rgba(0, 0, 0, 0.1);
+        transform: scale(0.95);
+      }
+    }
+  }
+}
+
+.titleH2 {
+  font-size: 1.875em;
+  margin: 0 0 1.5em 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include screen('mobile') {
+    margin-bottom: 1em;
+  }
+  &::before {
+    content: '';
+    display: block;
+    height: 30px;
+    width: 30px;
+    background: url(../images/icon_star_y.svg) no-repeat center;
+    background-size: contain;
+    margin-right: 8px;
+  }
+}
+
+.titleH3 {
+  font-size: 1em;
+  padding: 8px 20px;
+  border-radius: 50px;
+  background: rgba($colorPrimary, 0.6);
+  display: inline-block;
+}
+
+.adSlider {
+  padding: 3% 0 0;
+  .swiperBox {
+    padding: 0 50px;
+  }
+}
+
+.announcement {
+  margin-top: 18px;
+  @include screen('mobile') {
+    margin-top: 0;
+  }
+  .container {
+    background-color: $colorPrimary;
+    padding: 30px 20px 12px;
+    display: flex;
+    align-items: center;
+    font-size: 1.375em;
+    line-height: 1.5em;
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.18);
+    @include screen('mobile') {
+      font-size: 1.125em;
+    }
+    &::before {
+      content: '';
+      display: block;
+      height: 55px;
+      width: 55px;
+      flex: 0 0 55px;
+      margin-right: 15px;
+      background: #fff url(../images/icon_megaphone.svg) center no-repeat;
+      background-size: 36px;
+      border-radius: 50%;
+    }
+    &::after {
+      content: '';
+      display: block;
+      width: 80%;
+      height: 82px;
+      position: absolute;
+      left: 10%;
+      top: -50px;
+      background: url(../images/ring.png) repeat-x top center;
+      background-size: 146px;
+      @include screen('mobile') {
+        background-size: 100px;
+        top: -25px;
+        width: 100%;
+        left: 0;
+      }
+      @include screen('xsMobile') {
+        background-size: 80px;
+      }
+    }
+  }
+}
+
+//活動說明
+.descriptionBlock {
+  @include screen('mobile') {
+    padding: 0 15px;
+  }
+  .container {
+    padding: 50px;
+    margin: 3.75em auto;
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.03);
+    @include screen('mobile') {
+      padding: 40px 20px;
+      margin: 2em auto;
+    }
+    &::before {
+      content: '';
+      display: block;
+      width: calc(100% + 80px);
+      height: 100px;
+      position: absolute;
+      top: -30px;
+      left: -40px;
+      z-index: 1;
+      background-image: url(../images/sticker_left.png), url(../images/sticker_right.png);
+      background-position: left top, right top 10px;
+      background-repeat: no-repeat;
+      background-size: 130px;
+    }
+  }
+}
+
+.winnerList {
+  margin: 3em auto;
+  .container {
+    display: flex;
+    padding: 0 50px 0 0;
+    @include screen('mobile') {
+      flex-wrap: wrap;
+      padding: 0;
+    }
+    &::before {
+      content: '';
+      display: block;
+      width: 100%;
+      height: calc(100% - 20px);
+      position: absolute;
+      left: 0;
+      top: 10px;
+      background: $colorPrimary;
+    }
+  }
+  .pic {
+    flex: 0 0 45%;
+    overflow: hidden;
+    clip-path: polygon(0 0, 100% 0, 70% 100%, 0% 100%);
+    @include screen('mobile') {
+      flex: 1 1 100%;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+      max-height: 250px;
+    }
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .txtContainer {
+    position: relative;
+    z-index: 1;
+    margin: 60px 0 40px 50px;
+    @include screen('mobile') {
+      flex-wrap: 100%;
+      margin: 2em 0;
+      padding: 0 15px;
+    }
+    .list {
+      ul {
+        @include liReset;
+      }
+      li {
+        display: flex;
+        margin-bottom: 1.5em;
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+    }
+    .decoIcon {
+      flex: 0 0 60px;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      box-shadow: 0 0 7px rgba(0, 0, 0, 0.18);
+      background-color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 10px;
+      img {
+        width: 60%;
+      }
+    }
+    .txtContent {
+      position: relative;
+      padding-left: 20px;
+      &::before {
+        content: '';
+        display: block;
+        width: 1px;
+        height: 70px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: #fff;
+        transform: skew(-15deg);
+      }
+      .title {
+        font-weight: bold;
+      }
+      p {
+        margin: 0.25em 0;
+      }
+    }
+  }
+  .titleH2 {
+    &::before {
+      background-image: url(../images/icon_star.svg);
+    }
+  }
+}
+
+.locationBlock {
+  display: flex;
+  @include screen('mobile') {
+    flex-wrap: wrap;
+    flex-flow: column;
+  }
+  .map {
+    flex: 0 1 55%;
+    height: 390px;
+    max-height: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include screen('mobile') {
+      flex-basis: 100%;
+      max-height: 390px;
+    }
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .info {
+    flex: 0 1 45%;
+    background: $colorPrimary;
+    padding: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include screen('mobile') {
+      flex-basis: 100%;
+      padding: 2em 15px;
+    }
+    ul {
+      @include liReset;
+    }
+    li {
+      margin-bottom: 1.5em;
+      display: flex;
+      align-items: center;
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+    .title {
+      padding: 0.6em 1em;
+      background: #fff;
+      border-radius: 50px;
+      font-weight: bold;
+      margin-right: 0.5em;
+      white-space: nowrap;
+    }
+  }
+}

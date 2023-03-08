@@ -1,0 +1,45 @@
+.category {
+  text-align: left;
+  margin: 1em auto;
+  ul {
+    @include liReset;
+    display: flex;
+    flex-wrap: wrap;
+
+    li {
+      margin: 0px 5px 5px 0px;
+      display: block;
+    }
+  }
+  a {
+    border: 1px solid #ddd;
+    background: #fff;
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.03);
+    padding: 0.5em 1em;
+    border-radius: 50px;
+    display: block;
+    color: #333;
+    box-sizing: border-box;
+    &:before {
+      margin-right: 0.25em;
+    }
+    &:hover,
+    &:focus,
+    &.active {
+      background: lighten($colorPrimary, 5);
+      border: 1px solid lighten($colorPrimary, 5);
+      box-shadow: none;
+    }
+    span {
+      font-size: 0.813em;
+      &:before {
+        content: '(';
+        display: inline-block;
+      }
+      &:after {
+        content: ')';
+        display: inline-block;
+      }
+    }
+  }
+}
