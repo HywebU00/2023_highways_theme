@@ -770,8 +770,7 @@
     transform: translateY(0%);
     opacity: 1;
   }
-  .mobileSearch,
-  .desktopSearch {
+  .mobileSearch {
     width: 100%;
     max-width: 100%;
     min-width: auto;
@@ -788,43 +787,35 @@
     margin: 0;
     transition: all 0.3s linear;
   }
-  .mobileSearch.active,
-  .desktopSearch.active {
+  .mobileSearch.active {
     transform: translateY(0%);
     opacity: 1;
     display: block;
   }
-  .mobileSearch label,
-  .desktopSearch label {
+  .mobileSearch label {
     font-size: 0em;
     line-height: 0;
   }
-  .mobileSearch .formGrp,
-  .desktopSearch .formGrp {
+  .mobileSearch .formGrp {
     display: flex;
     align-items: center;
   }
-  .mobileSearch .formGrp label,
-  .desktopSearch .formGrp label {
+  .mobileSearch .formGrp label {
     display: none;
     flex: 0 0 0%;
   }
-  .mobileSearch .formGrp input,
-  .desktopSearch .formGrp input {
+  .mobileSearch .formGrp input {
     margin: 0.5em;
     padding: 0.5em;
     flex: 1 1 50%;
     max-width: 70%;
   }
-  .mobileSearch .formGrp input[type=submit],
-  .desktopSearch .formGrp input[type=submit] {
+  .mobileSearch .formGrp input[type=submit] {
     flex: 0 1 15%;
     margin: 0.5em;
   }
   .mobileSearch .formGrp .btn,
-  .mobileSearch .formGrp .btnSearch,
-  .desktopSearch .formGrp .btn,
-  .desktopSearch .formGrp .btnSearch {
+  .mobileSearch .formGrp .btnSearch {
     min-width: auto;
     padding: 0.5em 0.8em;
     margin: 0;
@@ -833,23 +824,17 @@
   }
   .mobileSearch .formGrp .btn:hover, .mobileSearch .formGrp .btn:focus-visible,
   .mobileSearch .formGrp .btnSearch:hover,
-  .mobileSearch .formGrp .btnSearch:focus-visible,
-  .desktopSearch .formGrp .btn:hover,
-  .desktopSearch .formGrp .btn:focus-visible,
-  .desktopSearch .formGrp .btnSearch:hover,
-  .desktopSearch .formGrp .btnSearch:focus-visible {
+  .mobileSearch .formGrp .btnSearch:focus-visible {
     box-shadow: none;
   }
-  .mobileSearch .btnGrp,
-  .desktopSearch .btnGrp {
+  .mobileSearch .btnGrp {
     flex: 1 1 auto;
     padding: 0.2em 0;
     border-bottom: solid 1px #444;
     box-sizing: border-box;
     text-align: center;
   }
-  .mobileSearch .btnGrp .btn,
-  .desktopSearch .btnGrp .btn {
+  .mobileSearch .btnGrp .btn {
     width: auto;
     padding: 0.2em 0.5em;
     margin: 0;
@@ -858,17 +843,13 @@
     color: #ddd;
     border: none;
   }
-  .mobileSearch .btnGrp .btn:hover, .mobileSearch .btnGrp .btn:focus-visible,
-  .desktopSearch .btnGrp .btn:hover,
-  .desktopSearch .btnGrp .btn:focus-visible {
+  .mobileSearch .btnGrp .btn:hover, .mobileSearch .btnGrp .btn:focus-visible {
     color: #a68000;
   }
-  .mobileSearch .keywordHot,
-  .desktopSearch .keywordHot {
+  .mobileSearch .keywordHot {
     flex: 1 1 100%;
   }
-  .mobileSearch .keywordHot ul,
-  .desktopSearch .keywordHot ul {
+  .mobileSearch .keywordHot ul {
     font-size: 0.875em;
     line-height: 1.65em;
     margin: 0;
@@ -877,19 +858,15 @@
     justify-content: flex-start;
     list-style-type: none;
   }
-  .mobileSearch .keywordHot ul li,
-  .desktopSearch .keywordHot ul li {
+  .mobileSearch .keywordHot ul li {
     margin: 0;
     padding: 0.5em;
     flex: 0 0 auto;
   }
-  .mobileSearch .keywordHot ul a,
-  .desktopSearch .keywordHot ul a {
+  .mobileSearch .keywordHot ul a {
     color: #fff;
   }
-  .mobileSearch .keywordHot ul a:hover, .mobileSearch .keywordHot ul a:focus-visible,
-  .desktopSearch .keywordHot ul a:hover,
-  .desktopSearch .keywordHot ul a:focus-visible {
+  .mobileSearch .keywordHot ul a:hover, .mobileSearch .keywordHot ul a:focus-visible {
     color: #a68000;
   }
   .webSearch.typeB {
