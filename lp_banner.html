@@ -145,39 +145,106 @@
                 </ul>
               </div>
             </div>
-            <!-- SP Start -->
-            <section class="sp">
-              <div id="gsresult">
-                <script>
-                  function gcseCallback() {
-                    //if (document.readyState != 'complete')
-                    //    return google.setOnLoadCallback(gcseCallback, true);
-                    google.search.cse.element.render({
-                      gname: 'gsearch',
-                      div: 'gsresult',
-                      tag: 'search',
-                      attributes: { as_sitesearch: '' },
-                    });
-                    var element = google.search.cse.element.getElement('gsearch');
-                    element.execute('法官');
-                  }
-                  window.__gcse = {
-                    parsetags: 'explicit',
-                    callback: gcseCallback,
-                  };
-                  (function () {
-                    var cx = 'bbfb6b718fa6fa6f6';
-                    var gcse = document.createElement('script');
-                    gcse.type = 'text/javascript';
-                    gcse.async = true;
-                    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-                    var s = document.getElementsByTagName('script')[0];
-                    s.parentNode.insertBefore(gcse, s);
-                  })();
-                </script>
+
+            <!-- LP Start -->
+            <section class="lp">
+              <!-- category -->
+              <div class="category">
+                <ul>
+                  <li><a href="#" class="active">標籤1</a></li>
+                  <li><a href="#">標籤2</a></li>
+                  <li><a href="#">標籤3</a></li>
+                  <li><a href="#">標籤4</a></li>
+                  <li><a href="#">標籤5</a></li>
+                  <li><a href="#">標籤6</a></li>
+                  <li><a href="#">標籤7</a></li>
+                  <li><a href="#">標籤8</a></li>
+                  <li><a href="#">標籤9</a></li>
+                  <li><a href="#">標籤10</a></li>
+                </ul>
+              </div>
+              <div class="bannerList">
+                <ul>
+                  <li>
+                    <a href="#">
+                      <span class="name">標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題</span>
+                      <img src="https://source.unsplash.com/random/1" alt="" />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <span class="name">標題</span>
+                      <img src="https://source.unsplash.com/random/2" alt="" />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <span class="name">標題</span>
+                      <img src="https://source.unsplash.com/random/3" alt="" />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <span class="name">標題</span>
+                      <img src="https://source.unsplash.com/random/4" alt="" />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <span class="name">標題</span>
+                      <img src="https://source.unsplash.com/random/5" alt="" />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <span class="name">標題</span>
+                      <img src="https://source.unsplash.com/random/6" alt="" />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <span class="name">標題</span>
+                      <img src="https://source.unsplash.com/random/7" alt="" />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <span class="name">標題</span>
+                      <img src="https://source.unsplash.com/random/8" alt="" />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <span class="name">標題</span>
+                      <img src="https://source.unsplash.com/random/9" alt="" />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <span class="name">標題</span>
+                      <img src="https://source.unsplash.com/random/10" alt="" />
+                    </a>
+                  </li>
+                </ul>
               </div>
             </section>
-            <!-- SP End -->
+            <!-- LP End -->
+            <!-- Pagination -->
+            <div class="pagination">
+              <div class="total">共<span>308</span>筆資料，第<span>1/18</span>頁，</div>
+              <div class="items">每頁顯示 <a href="#">20</a> <a href="#">40</a> <a href="#">60</a> 筆</div>
+              <ul class="page">
+                <li class="first"><a href="#" title="第一頁">第一頁</a></li>
+                <li class="prev"><a href="#" title="回上一頁">回上一頁 </a></li>
+                <li class="active"><a href="#">1</a></li>
+                <li class="xs_hidden"><a href="#">2</a></li>
+                <li class="xs_hidden"><a href="#">3</a></li>
+                <li class="xs_hidden"><a href="#">4</a></li>
+                <li class="xs_hidden"><a href="#">5</a></li>
+                <li class="next"><a href="#" title="下一頁">下一頁</a></li>
+                <li class="last"><a href="#" title="最後一頁">最後一頁</a></li>
+              </ul>
+            </div>
           </div>
         </div>
       </main>

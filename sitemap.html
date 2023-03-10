@@ -8,8 +8,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>網站標題</title>
 
+    <!-- 燈箱fancybox -->
+    <link rel="stylesheet" type="text/css" href="vendor/fancybox/jquery.fancybox.min.css" />
     <!-- style css -->
-    <link rel="stylesheet" href="css/style-1.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <!-- favicon -->
     <link href="images/favicon.png" rel="icon" type="image/x-icon" />
   </head>
@@ -113,6 +115,7 @@
             </div>
           </div>
         </section>
+        <!-- 主要內容區 -->
         <div class="centerBlock">
           <div class="container">
             <!-- breadcrumb路徑 -->
@@ -145,39 +148,58 @@
                 </ul>
               </div>
             </div>
-            <!-- SP Start -->
-            <section class="sp">
-              <div id="gsresult">
-                <script>
-                  function gcseCallback() {
-                    //if (document.readyState != 'complete')
-                    //    return google.setOnLoadCallback(gcseCallback, true);
-                    google.search.cse.element.render({
-                      gname: 'gsearch',
-                      div: 'gsresult',
-                      tag: 'search',
-                      attributes: { as_sitesearch: '' },
-                    });
-                    var element = google.search.cse.element.getElement('gsearch');
-                    element.execute('法官');
-                  }
-                  window.__gcse = {
-                    parsetags: 'explicit',
-                    callback: gcseCallback,
-                  };
-                  (function () {
-                    var cx = 'bbfb6b718fa6fa6f6';
-                    var gcse = document.createElement('script');
-                    gcse.type = 'text/javascript';
-                    gcse.async = true;
-                    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-                    var s = document.getElementsByTagName('script')[0];
-                    s.parentNode.insertBefore(gcse, s);
-                  })();
-                </script>
+
+            <!-- SITEMAP Start -->
+            <section class="sitemap">
+              <p>如果您使用的瀏覽器是IE，快速鍵的使用方式是<kbd>Alt</kbd> 加上所定義的字母；如果您用Firefox 瀏覽網頁，快速鍵的使用方式是 <kbd>Alt</kbd> 加 <kbd>Shift </kbd>加上所定義的字母 ：，本網站的快速鍵﹝accessKey﹞設定如下：</p>
+              <ul class="accessKeyDefine">
+                <li><kbd>Alt</kbd>+<kbd>U</kbd>上方功能區塊，包括回首頁、網站導覽、網站搜尋、字體選擇、版本選擇等。</li>
+                <li><kbd>Alt</kbd>+<kbd>C</kbd>中央內容區塊，為本頁主要內容區。</li>
+                <li><kbd>Alt</kbd>+<kbd>Z</kbd>下方功能區塊。</li>
+                <li><kbd>Alt</kbd>+<kbd>S</kbd>網站搜尋。</li>
+                <li>如果您的瀏覽器是Firefox，快速鍵的使用方法是 <kbd>Shift</kbd>+<kbd>Alt</kbd>+<kbd>(快速鍵字母)</kbd>，例如 <kbd>Shift</kbd>+<kbd>Alt</kbd>+<kbd>C</kbd>會跳至網頁中央區塊，以此類推。</li>
+              </ul>
+              <p>
+                ※當本網站項目頁籤無法以滑鼠點選時，您可利用以下鍵盤操作方式瀏覽資料 <br />
+                <kbd>←</kbd> <kbd>→</kbd> or <kbd>↑</kbd><kbd>↓</kbd>：按左右鍵或上下鍵移動標籤順序。 <br />
+                <kbd>Home</kbd> or <kbd>End</kbd><kbd>→</kbd>：可直接跳至標籤第一項或者最後一項。 <br />
+                <kbd>Tab</kbd>：停留於該標籤後,可利用<kbd>Tab</kbd>鍵跳至內容瀏覽該筆資料，遇到radio按鈕時請配合使用<kbd>←</kbd> <kbd>→</kbd> or <kbd>↑</kbd><kbd>↓</kbd>鍵移動項目順序。 <br />
+                <kbd><kbd>Tab + Shift</kbd></kbd
+                >：按Tab + Shift可往回跳至上一筆資料；當跳回至標籤項目時您可繼續利用<kbd>←</kbd> <kbd>→</kbd> or <kbd>↑</kbd><kbd>↓</kbd>鍵移動標籤順序。
+              </p>
+              <div class="cascading">
+                <ul>
+                  <li>
+                    <a href="#">活動辦法</a>
+                    <ul>
+                      <li><a href="#">目的</a></li>
+                      <li><a href="#">辦理單位</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">活動時間</a>
+                    <ul>
+                      <li><a href="#">活動期間</a></li>
+                      <li><a href="#">抽獎時間</a></li>
+                      <li><a href="#">公布時間</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">注意事項</a>
+                  </li>
+                  <li>
+                    <a href="#">活動獎項</a>
+                  </li>
+                  <li>
+                    <a href="#">得獎名單</a>
+                  </li>
+                  <li>
+                    <a href="#">活動花絮</a>
+                  </li>
+                </ul>
               </div>
             </section>
-            <!-- SP End -->
+            <!-- SITEMAP End -->
           </div>
         </div>
       </main>
@@ -263,14 +285,5 @@
     <script src="js/main.js"></script>
     <!-- js -->
     <script src="js/customize.js"></script>
-    <script>
-      let a = document.querySelectorAll('.navigation');
-      console.log(a[1].innerHTML);
-      // a.forEach((value, index) => {
-      //   value.addEventListener('click', function () {
-      //     console.log('a');
-      //   });
-      // });
-    </script>
   </body>
 </html>

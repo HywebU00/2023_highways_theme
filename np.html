@@ -8,8 +8,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>網站標題</title>
 
+    <!-- 燈箱fancybox -->
+    <link rel="stylesheet" type="text/css" href="vendor/fancybox/jquery.fancybox.min.css" />
     <!-- style css -->
-    <link rel="stylesheet" href="css/style-1.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <!-- favicon -->
     <link href="images/favicon.png" rel="icon" type="image/x-icon" />
   </head>
@@ -113,6 +115,7 @@
             </div>
           </div>
         </section>
+        <!-- 主要內容區 -->
         <div class="centerBlock">
           <div class="container">
             <!-- breadcrumb路徑 -->
@@ -145,39 +148,43 @@
                 </ul>
               </div>
             </div>
-            <!-- SP Start -->
-            <section class="sp">
-              <div id="gsresult">
-                <script>
-                  function gcseCallback() {
-                    //if (document.readyState != 'complete')
-                    //    return google.setOnLoadCallback(gcseCallback, true);
-                    google.search.cse.element.render({
-                      gname: 'gsearch',
-                      div: 'gsresult',
-                      tag: 'search',
-                      attributes: { as_sitesearch: '' },
-                    });
-                    var element = google.search.cse.element.getElement('gsearch');
-                    element.execute('法官');
-                  }
-                  window.__gcse = {
-                    parsetags: 'explicit',
-                    callback: gcseCallback,
-                  };
-                  (function () {
-                    var cx = 'bbfb6b718fa6fa6f6';
-                    var gcse = document.createElement('script');
-                    gcse.type = 'text/javascript';
-                    gcse.async = true;
-                    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-                    var s = document.getElementsByTagName('script')[0];
-                    s.parentNode.insertBefore(gcse, s);
-                  })();
-                </script>
-              </div>
+
+            <!-- NP Start -->
+            <section class="submenu">
+              <ul>
+                <li>
+                  <a href="#"><span class="num">1</span>節點1節點1節點1節點1節點1節點1節點1節點1節點1節點1節點1節點1節點1節點1節點1節點1節點1</a>
+                </li>
+                <li>
+                  <a href="#"><span class="num">2</span>節點2</a>
+                </li>
+                <li>
+                  <a href="#"><span class="num">3</span>節點3</a>
+                </li>
+                <li>
+                  <a href="#"><span class="num">4</span>節點4</a>
+                </li>
+                <li>
+                  <a href="#"><span class="num">5</span>節點5節點5節點5節點5節點5節點5節點5節點5節點5節點5節點5節點5節點5節點5節點5節點5</a>
+                </li>
+                <li>
+                  <a href="#"><span class="num">6</span>節點6</a>
+                </li>
+                <li>
+                  <a href="#"><span class="num">7</span>節點7</a>
+                </li>
+                <li>
+                  <a href="#"><span class="num">8</span>節點8</a>
+                </li>
+                <li>
+                  <a href="#"><span class="num">9</span>節點9</a>
+                </li>
+                <li>
+                  <a href="#"><span class="num">10</span>節點10</a>
+                </li>
+              </ul>
             </section>
-            <!-- SP End -->
+            <!-- NP End -->
           </div>
         </div>
       </main>
@@ -263,14 +270,5 @@
     <script src="js/main.js"></script>
     <!-- js -->
     <script src="js/customize.js"></script>
-    <script>
-      let a = document.querySelectorAll('.navigation');
-      console.log(a[1].innerHTML);
-      // a.forEach((value, index) => {
-      //   value.addEventListener('click', function () {
-      //     console.log('a');
-      //   });
-      // });
-    </script>
   </body>
 </html>

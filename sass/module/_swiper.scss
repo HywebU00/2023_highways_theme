@@ -124,53 +124,58 @@
   }
 }
 
-.cpSlider .swiper {
-  margin: 0 40px;
-  background: #fff;
-  overflow: hidden;
-
+.cpSlider {
   h3 {
     font-size: 1.5em;
     padding: 12px 0px 15px 0px;
     margin: 0.5em 0px 1.2em;
     border-bottom: 1px solid $colorPrimary;
   }
-  .cpSlider {
-    @include gutter;
-  }
-  .imgContainer {
-    @include aspectRatio(4, 3);
+  .swiper {
+    margin: 0 65px;
+    background: #fff;
     overflow: hidden;
-    img {
-      object-fit: contain;
+    @include screen('mobile') {
+      margin: 0;
     }
-  }
-  .caption {
-    padding: 0.5em;
-    position: absolute;
-    background: rgba(0, 0, 0, 0.75);
-    color: #fff;
-    bottom: -2em;
-    left: 0;
-    font-size: 0.938em;
-    height: 2em;
-    line-height: 1;
-    width: 100%;
-    @include textOverflow;
-    transition: 0.3s ease-out;
-  }
-  a {
-    color: #555;
-    display: block;
-    &:hover,
-    &:focus-visible {
-      .caption {
-        bottom: 0;
+
+    .imgContainer {
+      @include aspectRatio(4, 3);
+      overflow: hidden;
+      img {
+        object-fit: contain;
+      }
+    }
+    .caption {
+      padding: 0.5em;
+      position: absolute;
+      background: rgba(0, 0, 0, 0.75);
+      color: #fff;
+      bottom: -2em;
+      left: 0;
+      font-size: 0.938em;
+      height: 2em;
+      line-height: 1;
+      width: 100%;
+      @include textOverflow;
+      transition: 0.3s ease-out;
+    }
+    a {
+      color: #555;
+      display: block;
+      &:hover,
+      &:focus-visible {
+        .caption {
+          bottom: 0;
+        }
       }
     }
   }
   .swiperArrow {
     padding: 0;
+    @include screen('mobile') {
+      display: none;
+    }
   }
 }
 
@@ -269,6 +274,54 @@
       bottom: -40px;
     }
   }
+}
+.albumSwiper2,
+.albumSwiper {
+  padding: 0 15px;
+  margin: 30px 0;
+  position: relative;
+  @include screen('xsMobile') {
+    padding: 0;
+  }
+  .imgContainer {
+    @include aspectRatio(4, 3);
+    background: #333;
+    overflow: hidden;
+    img {
+      object-fit: contain;
+    }
+  }
+  .caption {
+    padding: 0.5em 1em;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    bottom: -2em;
+    left: 0;
+    height: 2.5em;
+    line-height: 1.5;
+    width: 100%;
+    @include textOverflow;
+    transition: 0.3s ease-out;
+  }
+  a {
+    color: #555;
+    display: block;
+    &:hover,
+    &:focus-visible {
+      .caption {
+        bottom: 0;
+      }
+    }
+  }
+  .swiperArrow {
+    @include screen('mobile') {
+      display: none;
+    }
+  }
+}
+.albumSwiper2 {
+  margin-bottom: 2em;
 }
 
 @keyframes imgdynamic {

@@ -185,3 +185,36 @@ accordionFunction({
     },
   });
 })();
+
+var albumSwiper = new Swiper('.albumSwiper .swiper', {
+  loop: true,
+  spaceBetween: 10,
+  freeMode: true,
+  watchSlidesProgress: true,
+  navigation: {
+    nextEl: '.albumSwiper .nextSlider',
+    prevEl: '.albumSwiper .prevSlider',
+  },
+  breakpoints: {
+    100: {
+      slidesPerView: 4,
+    },
+    767: {
+      slidesPerView: 5,
+    },
+    1000: {
+      slidesPerView: 6,
+    },
+  },
+});
+var albumSwiper2 = new Swiper('.albumSwiper2 .swiper', {
+  loop: true,
+  spaceBetween: 10,
+  navigation: {
+    nextEl: '.albumSwiper2 .nextSlider',
+    prevEl: '.albumSwiper2 .prevSlider',
+  },
+  thumbs: {
+    swiper: albumSwiper,
+  },
+});

@@ -109,7 +109,7 @@ section {
     padding: 30px 20px 12px;
     display: flex;
     align-items: center;
-    font-size: 1.375em;
+    font-size: 1.25em;
     line-height: 1.5em;
     box-shadow: 0 0 7px rgba(0, 0, 0, 0.18);
     @include screen('mobile') {
@@ -146,6 +146,9 @@ section {
         background-size: 80px;
       }
     }
+  }
+  p {
+    margin: 0.25em 0;
   }
 }
 
@@ -219,6 +222,7 @@ section {
     position: relative;
     z-index: 1;
     margin: 60px 0 40px 50px;
+    flex: 1 1 auto;
     @include screen('mobile') {
       flex-wrap: 100%;
       margin: 2em 0;
@@ -273,13 +277,23 @@ section {
       }
     }
   }
+  .more {
+    a {
+      background: rgba(255, 255, 255, 0.5);
+      &:hover {
+        background: rgba(255, 255, 255, 0.9);
+      }
+    }
+  }
   .titleH2 {
     &::before {
       background-image: url(../images/icon_star.svg);
     }
   }
 }
-
+.location {
+  margin-bottom: 3em;
+}
 .locationBlock {
   display: flex;
   @include screen('mobile') {
