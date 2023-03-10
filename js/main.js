@@ -281,11 +281,11 @@ function menu() {
     if (search !== null && windowWidth < windowWidthSmall) {
       search.removeAttribute('style');
       search.classList.add('mobileSearch');
-      search.classList.remove('desktopSearch');
+      //search.classList.remove('desktopSearch');
     } else if (search !== null && windowWidth > windowWidthSmall) {
       search.removeAttribute('style');
       search.classList.remove('mobileSearch');
-      search.classList.add('desktopSearch');
+      //search.classList.add('desktopSearch');
     }
   }
 }
