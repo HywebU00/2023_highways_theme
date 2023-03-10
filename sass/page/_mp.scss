@@ -103,6 +103,7 @@ section {
   margin-top: 18px;
   @include screen('mobile') {
     margin-top: 0;
+    padding: 0 15px;
   }
   .container {
     background-color: $colorPrimary;

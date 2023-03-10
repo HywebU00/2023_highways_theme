@@ -770,7 +770,8 @@
     transform: translateY(0%);
     opacity: 1;
   }
-  .mobileSearch {
+  .mobileSearch,
+  .desktopSearch {
     width: 100%;
     max-width: 100%;
     min-width: auto;
@@ -787,34 +788,43 @@
     margin: 0;
     transition: all 0.3s linear;
   }
-  .mobileSearch.active {
+  .mobileSearch.active,
+  .desktopSearch.active {
     transform: translateY(0%);
     opacity: 1;
+    display: block;
   }
-  .mobileSearch label {
+  .mobileSearch label,
+  .desktopSearch label {
     font-size: 0em;
     line-height: 0;
   }
-  .mobileSearch .formGrp {
+  .mobileSearch .formGrp,
+  .desktopSearch .formGrp {
     display: flex;
     align-items: center;
   }
-  .mobileSearch .formGrp label {
+  .mobileSearch .formGrp label,
+  .desktopSearch .formGrp label {
     display: none;
     flex: 0 0 0%;
   }
-  .mobileSearch .formGrp input {
+  .mobileSearch .formGrp input,
+  .desktopSearch .formGrp input {
     margin: 0.5em;
     padding: 0.5em;
     flex: 1 1 50%;
     max-width: 70%;
   }
-  .mobileSearch .formGrp input[type=submit] {
+  .mobileSearch .formGrp input[type=submit],
+  .desktopSearch .formGrp input[type=submit] {
     flex: 0 1 15%;
     margin: 0.5em;
   }
   .mobileSearch .formGrp .btn,
-  .mobileSearch .formGrp .btnSearch {
+  .mobileSearch .formGrp .btnSearch,
+  .desktopSearch .formGrp .btn,
+  .desktopSearch .formGrp .btnSearch {
     min-width: auto;
     padding: 0.5em 0.8em;
     margin: 0;
@@ -823,17 +833,23 @@
   }
   .mobileSearch .formGrp .btn:hover, .mobileSearch .formGrp .btn:focus-visible,
   .mobileSearch .formGrp .btnSearch:hover,
-  .mobileSearch .formGrp .btnSearch:focus-visible {
+  .mobileSearch .formGrp .btnSearch:focus-visible,
+  .desktopSearch .formGrp .btn:hover,
+  .desktopSearch .formGrp .btn:focus-visible,
+  .desktopSearch .formGrp .btnSearch:hover,
+  .desktopSearch .formGrp .btnSearch:focus-visible {
     box-shadow: none;
   }
-  .mobileSearch .btnGrp {
+  .mobileSearch .btnGrp,
+  .desktopSearch .btnGrp {
     flex: 1 1 auto;
-    padding: 0.25em 0.5em;
+    padding: 0.2em 0;
     border-bottom: solid 1px #444;
     box-sizing: border-box;
-    text-align: right;
+    text-align: center;
   }
-  .mobileSearch .btnGrp .btn {
+  .mobileSearch .btnGrp .btn,
+  .desktopSearch .btnGrp .btn {
     width: auto;
     padding: 0.2em 0.5em;
     margin: 0;
@@ -842,13 +858,17 @@
     color: #ddd;
     border: none;
   }
-  .mobileSearch .btnGrp .btn:hover, .mobileSearch .btnGrp .btn:focus-visible {
+  .mobileSearch .btnGrp .btn:hover, .mobileSearch .btnGrp .btn:focus-visible,
+  .desktopSearch .btnGrp .btn:hover,
+  .desktopSearch .btnGrp .btn:focus-visible {
     color: #a68000;
   }
-  .mobileSearch .keywordHot {
+  .mobileSearch .keywordHot,
+  .desktopSearch .keywordHot {
     flex: 1 1 100%;
   }
-  .mobileSearch .keywordHot ul {
+  .mobileSearch .keywordHot ul,
+  .desktopSearch .keywordHot ul {
     font-size: 0.875em;
     line-height: 1.65em;
     margin: 0;
@@ -857,15 +877,19 @@
     justify-content: flex-start;
     list-style-type: none;
   }
-  .mobileSearch .keywordHot ul li {
+  .mobileSearch .keywordHot ul li,
+  .desktopSearch .keywordHot ul li {
     margin: 0;
     padding: 0.5em;
     flex: 0 0 auto;
   }
-  .mobileSearch .keywordHot ul a {
+  .mobileSearch .keywordHot ul a,
+  .desktopSearch .keywordHot ul a {
     color: #fff;
   }
-  .mobileSearch .keywordHot ul a:hover, .mobileSearch .keywordHot ul a:focus-visible {
+  .mobileSearch .keywordHot ul a:hover, .mobileSearch .keywordHot ul a:focus-visible,
+  .desktopSearch .keywordHot ul a:hover,
+  .desktopSearch .keywordHot ul a:focus-visible {
     color: #a68000;
   }
   .webSearch.typeB {
@@ -876,11 +900,14 @@
     margin: 0;
     z-index: 90;
   }
+  .webSearch.typeB.active {
+    display: block;
+  }
   .webSearch.typeB .content {
     padding: 15px 15px 10px;
     display: flex;
     flex-wrap: wrap;
-    background: #444;
+    background: #333;
   }
   .webSearch.typeB .formGrp {
     display: flex;
@@ -6264,6 +6291,7 @@
   @media screen and (max-width: 767px) {
     .announcement {
       margin-top: 0;
+      padding: 0 15px;
     }
   }
   .announcement .container {
