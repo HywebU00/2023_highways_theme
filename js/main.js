@@ -1196,10 +1196,10 @@ function templateChange(obj) {
   }
 }
 
-// templateChange({
-//   searchType: 'typeB',
-//   fontSize: 'typeB',
-// });
+templateChange({
+  searchType: 'typeB',
+  //fontSize: 'typeB',
+});
 // -----------------------------------------------------------------------
 // -----  分享按鈕 share dropdwon   ---------------------------------------
 // -----------------------------------------------------------------------
