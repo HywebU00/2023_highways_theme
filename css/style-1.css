@@ -6224,9 +6224,7 @@
   }
   .announcement .container {
     background-color: #ffc500;
-    padding: 30px 20px 12px;
-    display: flex;
-    align-items: center;
+    padding: 30px 20px 12px 90px;
     font-size: 1.25em;
     line-height: 1.5em;
     box-shadow: 0 0 7px rgba(0, 0, 0, 0.18);
@@ -6244,7 +6242,9 @@
     display: block;
     height: 55px;
     width: 55px;
-    flex: 0 0 55px;
+    position: absolute;
+    left: 20px;
+    top: 30px;
     margin-right: 15px;
     background: #fff url(../images/icon_megaphone.svg) center no-repeat;
     background-size: 36px;
