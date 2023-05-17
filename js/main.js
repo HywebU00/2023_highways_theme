@@ -263,7 +263,8 @@ function menu() {
   const siteHeader = document.querySelector('.header .container');
   searchCtrlBtn.className = 'searchCtrlBtn';
   searchCtrlBtn.setAttribute('type', 'button');
-  siteHeader.prepend(searchCtrlBtn, sidebarCtrlBtn);
+  //siteHeader.prepend(searchCtrlBtn, sidebarCtrlBtn);
+  siteHeader.prepend(sidebarCtrlBtn);
 
   // --- menu初始化 複製手機版側欄選單
   const mobileArea = document.querySelector('.mobileArea');
@@ -278,13 +279,16 @@ function menu() {
   function mobileSearchFunction() {
     let windowWidth = window.outerWidth;
     const search = document.querySelector('.webSearch');
+    const menuOverlay = document.querySelector('.menuOverlay');
+
     if (search !== null && windowWidth < windowWidthSmall) {
       search.removeAttribute('style');
-      search.classList.add('mobileSearch');
+
+      //search.classList.add('mobileSearch');
       //search.classList.remove('desktopSearch');
     } else if (search !== null && windowWidth > windowWidthSmall) {
       search.removeAttribute('style');
-      search.classList.remove('mobileSearch');
+      //search.classList.remove('mobileSearch');
       //search.classList.add('desktopSearch');
     }
   }
@@ -327,47 +331,47 @@ function topNav() {
 // ----- 手機版本search設定 ------------------------------------------------
 // -----------------------------------------------------------------------
 
-function mobileSearch(obj) {
-  const searchCtrlBtn = obj.searchCtrlBtn;
-  const mobileSearch = document.querySelector('.webSearch');
-  const menuOverlay = document.querySelector('.menuOverlay');
+// function mobileSearch(obj) {
+//   const searchCtrlBtn = obj.searchCtrlBtn;
+//   const mobileSearch = document.querySelector('.webSearch');
+//   const menuOverlay = document.querySelector('.menuOverlay');
 
-  searchCtrlBtn.addEventListener('click', (e) => {
-    let searchOpen = mobileSearch.classList.contains('active');
-    e.stopPropagation();
-    // --- 點擊搜尋區以外的區塊
-    // --- 如果點在外面 則 searchMode 狀態改為false
-    if (!searchOpen) {
-      mobileSearch.removeAttribute('style');
-      mobileSearch.classList.add('active');
-      jsFadeIn(menuOverlay);
-      menuOverlay.style.zIndex = `90`;
-      searchOpen = true;
-    } else {
-      mobileSearch.classList.remove('active');
-      jsFadeOut(menuOverlay);
-      searchOpen = false;
-    }
-  });
-  menuOverlay.addEventListener('click', (e) => {
-    mobileSearch.classList.remove('active');
-  });
+//   searchCtrlBtn.addEventListener('click', (e) => {
+//     let searchOpen = mobileSearch.classList.contains('active');
+//     e.stopPropagation();
+//     // --- 點擊搜尋區以外的區塊
+//     // --- 如果點在外面 則 searchMode 狀態改為false
+//     if (!searchOpen) {
+//       mobileSearch.removeAttribute('style');
+//       mobileSearch.classList.add('active');
+//       jsFadeIn(menuOverlay);
+//       menuOverlay.style.zIndex = `90`;
+//       searchOpen = true;
+//     } else {
+//       mobileSearch.classList.remove('active');
+//       jsFadeOut(menuOverlay);
+//       searchOpen = false;
+//     }
+//   });
+//   menuOverlay.addEventListener('click', (e) => {
+//     mobileSearch.classList.remove('active');
+//   });
 
-  window.addEventListener('resize', (e) => {
-    setTimeout(() => {
-      searchOpen = false;
-      menuOverlay.style.display = 'none';
-      mobileSearch !== null ? mobileSearch.classList.remove('active') : '';
-    }, 50);
-  });
+//   window.addEventListener('resize', (e) => {
+//     setTimeout(() => {
+//       searchOpen = false;
+//       menuOverlay.style.display = 'none';
+//       mobileSearch !== null ? mobileSearch.classList.remove('active') : '';
+//     }, 50);
+//   });
 
-  menuOverlay.addEventListener('click', (e) => {
-    jsFadeOut(menuOverlay);
-  });
-}
-mobileSearch({
-  searchCtrlBtn: document.querySelector('.searchCtrlBtn'),
-});
+//   menuOverlay.addEventListener('click', (e) => {
+//     jsFadeOut(menuOverlay);
+//   });
+// }
+// mobileSearch({
+//   searchCtrlBtn: document.querySelector('.searchCtrlBtn'),
+// });
 
 // -----------------------------------------------------------------------
 // ----- 手機桌機版本切換及手機版menu設定 -------------------------------------
@@ -1791,13 +1795,13 @@ function langFunction(obj) {
       }
     });
 
-    obj.searchBtn.data.forEach((s) => {
-      if (webLang.slice(0, 2) == s.lang) {
-        searchCtrlBtn.innerHTML = s.text;
-      } else {
-        searchCtrlBtn.innerHTML = obj.searchBtn.default;
-      }
-    });
+    // obj.searchBtn.data.forEach((s) => {
+    //   if (webLang.slice(0, 2) == s.lang) {
+    //     searchCtrlBtn.innerHTML = s.text;
+    //   } else {
+    //     searchCtrlBtn.innerHTML = obj.searchBtn.default;
+    //   }
+    // });
   }
 
   // form password eyes

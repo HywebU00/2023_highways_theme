@@ -650,6 +650,13 @@
     background-color: #ffc500;
     box-shadow: 0 0 7px rgba(0, 0, 0, 0.18);
   }
+  @media screen and (max-width: 767px) {
+    .webSearchBtn > button {
+      width: 60px;
+      border-radius: 0;
+      box-shadow: none;
+    }
+  }
   .webSearchBtn > button::before {
     content: "";
     width: 100%;
@@ -777,6 +784,14 @@
     max-width: 450px;
     margin: 0;
     z-index: 90;
+  }
+  @media screen and (max-width: 767px) {
+    .webSearch.typeB {
+      right: 0;
+      top: 60px;
+      width: 100%;
+      max-width: 100%;
+    }
   }
   .webSearch.typeB.active {
     display: block;
@@ -2201,10 +2216,7 @@
     transition: 0.2s linear;
   }
   .searchCtrlBtn {
-    display: none;
     right: 60px;
-    font-size: 0em;
-    z-index: 9;
     width: 60px;
     height: 60px;
     position: absolute;
@@ -2350,10 +2362,12 @@
     position: relative;
     z-index: 55;
     align-items: center;
+    min-height: 85px;
   }
   @media screen and (max-width: 767px) {
     .header .navigation {
-      display: none;
+      z-index: 99;
+      min-height: auto;
     }
   }
   .header .navigation .navList {
@@ -2363,6 +2377,11 @@
   @media screen and (max-width: 991px) {
     .header .navigation .navList {
       margin: 0;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    .header .navigation .navList {
+      display: none;
     }
   }
   .header .navigation .navList ul {
@@ -2412,6 +2431,14 @@
   .header .navigation .submenuBox {
     margin: 10px 0 10px 10px;
     position: relative;
+  }
+  @media screen and (max-width: 767px) {
+    .header .navigation .submenuBox {
+      position: absolute;
+      right: 60px;
+      top: 0;
+      margin: 0;
+    }
   }
   .header .navigation .submenuBox > div + div::after {
     content: "";

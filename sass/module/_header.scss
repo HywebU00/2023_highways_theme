@@ -67,11 +67,7 @@
 }
 // search
 .searchCtrlBtn {
-  display: none;
   right: 60px;
-  font-size: 0em;
-  z-index: 9;
-
   @include mobileCtrlBtn;
   &:before {
     width: 40px;
@@ -182,14 +178,20 @@
     position: relative;
     z-index: 55;
     align-items: center;
+    min-height: 85px;
     @include screen('mobile') {
-      display: none;
+      z-index: 99;
+      min-height: auto;
     }
+
     .navList {
       flex: 1 1 auto;
       margin: 0 0.5em 0 0;
       @include screen('tablet') {
         margin: 0;
+      }
+      @include screen('mobile') {
+        display: none;
       }
       ul {
         padding: 0;
@@ -233,6 +235,12 @@
     .submenuBox {
       margin: 10px 0 10px 10px;
       position: relative;
+      @include screen('mobile') {
+        position: absolute;
+        right: 60px;
+        top: 0;
+        margin: 0;
+      }
       & > div {
         + div::after {
           content: '';
