@@ -1273,9 +1273,13 @@ function categoryActive() {
   const categoryList = document.querySelectorAll('.category');
   categoryList.forEach((i) => {
     const item = i.querySelectorAll('a');
+
     item.forEach((tag) => {
       tag.addEventListener('click', (e) => {
         e.preventDefault();
+        const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+        window.location.href = tag.href;
+        window.scrollTo(0, scrollPosition);
         removeClass(item);
         e.target.classList.add('active');
       });
