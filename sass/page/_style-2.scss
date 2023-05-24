@@ -1,0 +1,66 @@
+//_mp.scss
+section {
+  .more {
+    a {
+      color: $colorLightGray;
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+}
+.titleH2 {
+  &::before {
+    content: '';
+    background-image: url(../images/icon_star_b.svg);
+  }
+}
+
+.titleH3 {
+  color: #fff;
+}
+
+.announcement {
+  color: #fff;
+}
+
+.descriptionBlock {
+  .container {
+    &::before {
+      background-image: url(../images/sticker_left_b.png), url(../images/sticker_right_b.png);
+    }
+  }
+}
+
+.winnerList {
+  color: #fff;
+  .titleH2 {
+    &::before {
+      background-image: url(../images/icon_star_w.svg);
+    }
+  }
+  .more {
+    a {
+      color: $colorWord;
+      background: rgba(255, 255, 255, 0.75);
+      &:hover {
+        color: #000;
+        background: rgba(255, 255, 255, 0.9);
+      }
+    }
+  }
+}
+
+.location {
+  color: #fff;
+}
+
+//_btn.scss
+.btnSearch {
+  color: #fff;
+}
+
+//_element.scss
+.scrollToTop {
+  background-image: url(../images/icon/icon_arrow_up.svg);
+}
