@@ -3,9 +3,9 @@
 
 //---------------------------------------------------顏色---------//
 // 定義顏色 此顏色可自由變換
-$colorPrimary: #ffc500; //主色
-$colorSecondary: #781f79; //輔色
-$colorLink: #00a4f9; //連結
+$colorPrimary: #b31919; //主色
+$colorSecondary: #f23054; //輔色
+$colorLink: #a61717; //連結
 $colorImportant: #eb0202; //重要
 // 但注意真實顏色與語意的關聯必須易於辨識
 $colorBlue: #0066cc;
@@ -22,7 +22,7 @@ $colorWord: #333; //一般字的顏色
 $btnWordColor: #222; //按鈕字的顏色
 // 連結顏色
 $aColor: mix($colorPrimary, #000, 50%);
-$aHover: mix($aColor, #000, 90%);
+$aHover: mix($aColor, #fff, 80%);
 $aFocus: mix($aColor, #fff, 90%);
 // 表單focus顏色
 $formFocus: $colorPrimary; //表單

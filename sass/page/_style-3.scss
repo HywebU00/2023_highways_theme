@@ -12,7 +12,7 @@ section {
 .titleH2 {
   &::before {
     content: '';
-    background-image: url(../images/icon_star_b.svg);
+    background-image: url(../images/icon_star_r.svg);
   }
 }
 
@@ -27,7 +27,7 @@ section {
 .descriptionBlock {
   .container {
     &::before {
-      background-image: url(../images/sticker_left_b.png), url(../images/sticker_right_b.png);
+      background-image: url(../images/sticker_left_r.png), url(../images/sticker_right_r.png);
     }
   }
 }
@@ -41,7 +41,7 @@ section {
   }
   .more {
     a {
-      background: rgba(255, 255, 255, 0.4);
+      background: rgba(255, 255, 255, 0.35);
       &:hover {
         color: $colorWord;
         background: rgba(255, 255, 255, 0.8);
